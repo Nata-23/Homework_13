@@ -20,3 +20,12 @@ const getGitHubUser = async (user) => {
 };
 
 getGitHubUser(user);
+storage.remove("theme");
+
+//3
+// const isValidDateFormat = (str) => {
+//   let regexp = /^\d{4}\/\d{2}\/\d{2}\s\d\d:\d\d$/;
+//   return regexp.test(str);
+// };
+// console.log(isValidDateFormat("2012/09/18 12:10")); // true
+// console.log(isValidDateFormat("12.02.2022 12:10")); // false
