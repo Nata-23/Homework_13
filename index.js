@@ -24,9 +24,9 @@ console.log(userJSON);
 if (userJSON) {
   console.log("from storage");
   console.log(userJSON);
+} else {
+  getGitHubUser(user);
 }
-getGitHubUser(user);
-
 // storage.remove("theme");
 
 //3
