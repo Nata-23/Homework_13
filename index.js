@@ -9,7 +9,7 @@ const getGitHubUser = async (user) => {
     }
     const data = await response.json();
     console.log("data", data);
-    const user1 = storage.get(data);
+    const user1 = storage.set(data);
   } catch (responseError) {
     if (responseError.status === 404) {
       console.log("User is not found");
@@ -19,8 +19,15 @@ const getGitHubUser = async (user) => {
   }
 };
 
+const userJSON = storage.get(user);
+console.log(userJSON);
+if (userJSON) {
+  console.log("from storage");
+  console.log(userJSON);
+}
 getGitHubUser(user);
-storage.remove("theme");
+
+// storage.remove("theme");
 
 //3
 // const isValidDateFormat = (str) => {
